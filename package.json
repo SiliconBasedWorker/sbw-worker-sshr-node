@@ -1,0 +1,50 @@
+{
+  "name": "sbw-worker-sshr-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stop": "pkill -f index.js",
+    "start": "nohup npm run serv > /dev/null 2>&1 &",
+    "serv": "node index.js",
+    "setup": "node setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiliconBasedWorker/sbw-worker-sshr-node.git"
+  },
+  "author": "Wolf Hugo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiliconBasedWorker/sbw-worker-sshr-node/issues"
+  },
+  "homepage": "https://github.com/SiliconBasedWorker/sbw-worker-sshr-node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-ssh": "^12.0.0",
+    "socket.io-client": "^4.2.0",
+    "wol": "^1.0.7"
+  },
+  "deps": {
+    "sbw-finger-wol-node": {
+      "user": "SiliconBasedWorker",
+      "repo": "sbw-finger-wol-node",
+      "branch": "main",
+      "file": "sbw-finger-wol.js",
+      "path": "",
+      "deps": [
+        "wol"
+      ]
+    },
+    "sbw-finger-ssh-node": {
+      "user": "SiliconBasedWorker",
+      "repo": "sbw-finger-ssh-node",
+      "branch": "main",
+      "file": "sbw-finger-ssh.js",
+      "path": "",
+      "deps": [
+        "node-ssh"
+      ]
+    }
+  }
+}
